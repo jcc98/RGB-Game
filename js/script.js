@@ -1,8 +1,10 @@
 // DOM operation
+const rgbRed = document.getElementById("rgbRed");
+const rgbGreen = document.getElementById("rgbGreen");
+const rgbBlue = document.getElementById("rgbBlue");
 const btn = document.getElementById("btn");
 const containerTitle = document.getElementById("start-title");
 const gameUI = document.getElementById("game-ui");
-const correctRGBTitle = document.getElementById("rgb");
 const myBar = document.getElementById("myBar");
 const item0 = document.getElementById("itemOne");
 const item1 = document.getElementById("itemTwo");
@@ -56,7 +58,7 @@ function shuffle (array) {
 };
 
 
-// Function for generating 3 fake random RGBs
+// Function for generating 3 fake random RGBs + The real one (rgbObj)
 function genNumbers() {
     for (i = 0; i < 3; i++) {
         rgbFake1[i] = Math.floor(Math.random() * 255);
@@ -69,7 +71,11 @@ function genNumbers() {
     fourAnswers.push(rgbFake2);
     fourAnswers.push(rgbFake3);
     fourAnswers.push(rgbObj);
-    correctRGBTitle.innerHTML = rgbObj;
+    rgbRed.textContent = rgbObj[0];
+    rgbGreen.textContent = rgbObj[1];
+    rgbBlue.textContent = rgbObj[2];
+
+    console.log(rgbObj)
     shuffle(fourAnswers);
 // Change bullets to color
 item0.style.backgroundColor = `rgb(${fourAnswers[0]})`;

@@ -1,7 +1,7 @@
 .container {
   text-align: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,6 +14,12 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 5px 8px 2px rgba(0, 0, 0, 0.59);
+          box-shadow: 1px 5px 8px 2px rgba(0, 0, 0, 0.59);
+  padding: 5rem 10rem;
 }
 
 .container-change {
@@ -78,5 +84,21 @@
 
 .game-over {
   text-align: center;
+}
+
+.correct-rgb-values {
+  font-size: 5rem;
+}
+
+div > .rgbRed {
+  color: red;
+}
+
+div > .rgbGreen {
+  color: green;
+}
+
+div > .rgbBlue {
+  color: blue;
 }
 /*# sourceMappingURL=style.css.map */

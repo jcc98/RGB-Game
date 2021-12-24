@@ -13,19 +13,21 @@
     </head>
 </head>
 <body>
-    <div id="start-title" class="container">
+    <div id="start-title" class="shadow flow-text container">
         <h1 class="title">RGB Quiz</h1>
-        <h2 class="rules">ルール</h2>
-        <p class="exp">Guess the designated RGB color. Max score is 10. One point is substracted each time you pick the wrong answer.</p>
-        <a class="z-depth-2 waves-effect waves-light btn-large" id="btn">スタート</a>
-    </div>
+        <p class="exp">Rules: Guess the designated RGB color. Max score is 10. One point is substracted each time you pick the wrong answer.</p>
+        <a class="z-depth-2 waves-effect waves-light btn-large" id="btn">Start</a>
     </div>
 
-    <div id="game-ui" class="container container-change">
+    <div id="game-ui" class="shadow container container-change">
         <div id="myProgress">
             <div class="my-bar" id="myBar"></div>
         </div>
-        <p id="rgb" class="rgb"></p>
+        <div class="correct-rgb-values">
+            <span class="rgbRed"><span id="rgbRed"></span></span>
+            <span class="rgbGreen"><span id="rgbGreen"></span></span>
+            <span class="rgbBlue"><span id="rgbBlue"></span></span>
+        </div>
         <p id="guess"></p>
         <p id="score"></p>
         <ul id="ul">
@@ -35,9 +37,9 @@
             <li id="itemFour" class="items"></li>
         </ul>
     </div>
-    <div id="game-over" class="game-over container-change">
-        <h2>ゲームオーバー</h2>
-        <a class="z-depth-2 waves-effect waves-light btn-large" id="restart">もう一回</a>
+    <div id="game-over" class="game-over container container-change">
+        <h2>Gameover</h2>
+        <a class="z-depth-2 waves-effect waves-light btn-large" id="restart">Try again</a>
         <p id="game-over-text"></p>
     </div>
 

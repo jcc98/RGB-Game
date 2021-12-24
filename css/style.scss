@@ -1,11 +1,16 @@
 .container {
     text-align: center;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+}
+
+.shadow {
+    box-shadow: 1px 5px 8px 2px rgba(0,0,0,0.59);
+    padding: 5rem 10rem;    
 }
 
 .container-change {
@@ -69,4 +74,20 @@
 
 .game-over {
     text-align: center;
+}
+
+.correct-rgb-values {
+    font-size: 5rem;
+}
+
+div > .rgbRed {
+    color: red;
+}
+
+div > .rgbGreen {
+    color: green;
+}
+
+div > .rgbBlue {
+    color: blue;
 }
