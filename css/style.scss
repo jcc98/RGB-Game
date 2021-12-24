@@ -19,6 +19,8 @@
 
 .title {
     color: #006064;
+    text-shadow: 1px 1px 1px #fff;
+
 }
 
 #ul {
@@ -35,7 +37,8 @@
 }
 
 .exp {
-    color: #00acc1;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
     
 }
 
@@ -43,6 +46,10 @@
     width: 100%;
     background-color: rgb(214, 214, 214);
 }
+
+.body-container {
+    
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);}
 
 .my-bar {
     width: 1%;
@@ -55,11 +62,17 @@
     font-size: 30px;
 }
 
+#guess {
+    font-size: 1.5rem;
+    color: #00838f;
+
+}
+
 .items {
     width: 15px;
     height: 15px;
-    background-color: red;
     border-radius: 50%;
+    border: 1.5px solid #000;
     margin: 25px;
     padding: 35px;
     cursor: pointer;
@@ -75,12 +88,15 @@
 }
 
 #score {
-    color: #00acc1;
+    color: #006064;
     font-size: 2.5rem;
+    text-shadow: 1px 1px 1px #fff;
+
 }
 
 .time-limit {
-    color: #00acc1;
+    color: #006064;
+    text-shadow: 1px 1px 1px #fff;
     font-size: 2.5rem;
 }
 

@@ -13,35 +13,37 @@
     </head>
 </head>
 <body>
-    <div id="start-title" class="shadow flow-text container">
-        <h1 class="title">RGB Quiz</h1>
-        <p class="exp">Rules: Guess the designated RGB color. Max score is 10. One point is substracted each time you pick the wrong answer.</p>
-        <a class="z-depth-2 waves-effect waves-light btn-large" id="btn">Start</a>
-    </div>
+    <div class="body-container">
+        <div id="start-title" class="shadow flow-text container">
+            <h1 class="title">RGB Quiz</h1>
+            <p class="exp">Rules: Guess the designated RGB color. Max score is 10. One point is substracted each time you pick the wrong answer.</p>
+            <a class="z-depth-2 waves-effect waves-light btn-large" id="btn">Start</a>
+        </div>
 
-    <div id="game-ui" class="shadow container container-change">
-        <span class="time-limit">Time limit</span>
-        <div id="myProgress">
-            <div class="my-bar" id="myBar"></div>
+        <div id="game-ui" class="shadow container container-change">
+            <span class="time-limit">Time limit</span>
+            <div id="myProgress">
+                <div class="my-bar" id="myBar"></div>
+            </div>
+            <div class="correct-rgb-values">
+                <span class="rgbRed"><span id="rgbRed"></span></span>
+                <span class="rgbGreen"><span id="rgbGreen"></span></span>
+                <span class="rgbBlue"><span id="rgbBlue"></span></span>
+            </div>
+            <p id="guess"></p>
+            <p id="score"></p>
+            <ul id="ul">
+                <li id="itemOne" class="items"></li>
+                <li id="itemTwo" class="items"></li>
+                <li id="itemThree" class="items"></li>
+                <li id="itemFour" class="items"></li>
+            </ul>
         </div>
-        <div class="correct-rgb-values">
-            <span class="rgbRed"><span id="rgbRed"></span></span>
-            <span class="rgbGreen"><span id="rgbGreen"></span></span>
-            <span class="rgbBlue"><span id="rgbBlue"></span></span>
+        <div id="game-over" class="shadow game-over container container-change">
+            <h2 class="title">Game over!</h2>
+            <a class="z-depth-2 waves-effect waves-light btn-large" id="restart">Try again</a>
+            <p id="game-over-text"></p>
         </div>
-        <p id="guess"></p>
-        <p id="score"></p>
-        <ul id="ul">
-            <li id="itemOne" class="items"></li>
-            <li id="itemTwo" class="items"></li>
-            <li id="itemThree" class="items"></li>
-            <li id="itemFour" class="items"></li>
-        </ul>
-    </div>
-    <div id="game-over" class="game-over container container-change">
-        <h2>Gameover</h2>
-        <a class="z-depth-2 waves-effect waves-light btn-large" id="restart">Try again</a>
-        <p id="game-over-text"></p>
     </div>
 
     <script src="js/script.js"></script>

@@ -28,6 +28,7 @@ let rgbObjTitle;
 // Count Variables
 const totalGame = 10;
 let score = 0;
+const scoreLimit = 10;
 let width = 0;
 let nbOfGuesses = 0;
 let match;
@@ -93,7 +94,7 @@ ulTarget.addEventListener("click", (e) => {
     if (e.target.value !== 0) return;
     if (e.target.style.backgroundColor === match) {
         score++;
-        scoreDisplay.innerHTML = `Score: ${score}`;
+        scoreDisplay.textContent = `Score: ${score}`;
         fourAnswers = [];
         genNumbers();
         clearInterval(id);
@@ -101,11 +102,11 @@ ulTarget.addEventListener("click", (e) => {
         myBar.style.width = width + "%";
         move();
         nbOfGuesses++;
-        guess.innerHTML = `Questions left: ${nbOfGuesses}/10`;
+        guess.textContent = `Questions left: ${nbOfGuesses}/${scoreLimit}`;
 
     } else {
         score--;
-        scoreDisplay.innerHTML = `Score: ${score}`;
+        scoreDisplay.textContent = `Score: ${score}`;
     }
 });
 
@@ -115,18 +116,18 @@ const runApp = () => {
     containerTitle.classList.add("container-change");
     gameUI.classList.remove("container-change");
     move();
-    scoreDisplay.innerHTML = `Score: ${score}`;
+    scoreDisplay.textContent = `Score: ${score}`;
 
 }
 
 function move() {
     id = setInterval(() => {
-    if (width > 100 || nbOfGuesses >= 10) {
+    if (width > 100 || nbOfGuesses >= scoreLimit) {
         clearInterval(id);
         count = 0;
         gameOver.classList.remove("container-change");
         gameUI.classList.add("container-change");
-        gameOverText.innerHTML = `Your score was ${score} (Max score: ${nbOfGuesses})`
+        gameOverText.textContent = `Your score was ${score} (Max score: ${scoreLimit})`
         }
     
      else {
