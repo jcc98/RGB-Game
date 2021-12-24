@@ -16,10 +16,25 @@
       align-content: center;
 }
 
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 .shadow {
   -webkit-box-shadow: 1px 5px 8px 2px rgba(0, 0, 0, 0.59);
           box-shadow: 1px 5px 8px 2px rgba(0, 0, 0, 0.59);
   padding: 5rem 10rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .shadow {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0;
+  }
 }
 
 .container-change {
@@ -29,6 +44,12 @@
 .title {
   color: #006064;
   text-shadow: 1px 1px 1px #fff;
+}
+
+@media only screen and (max-width: 800px) {
+  .title {
+    font-size: 3rem;
+  }
 }
 
 #ul {
@@ -51,6 +72,11 @@
 .exp {
   color: #fff;
   text-shadow: 1px 1px 1px black;
+}
+
+#myBar {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #myProgress {
@@ -102,10 +128,23 @@
           transform: scale(0.7);
 }
 
+@media screen and (max-width: 800px) {
+  .items {
+    padding: 18px;
+    margin: 10px;
+  }
+}
+
 #score {
   color: #006064;
   font-size: 2.5rem;
   text-shadow: 1px 1px 1px #fff;
+}
+
+@media screen and (max-width: 800px) {
+  #score {
+    font-size: 1.5rem;
+  }
 }
 
 .time-limit {
@@ -120,6 +159,12 @@
 
 .correct-rgb-values {
   font-size: 5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .correct-rgb-values {
+    font-size: 2.5rem;
+  }
 }
 
 div > .rgbRed {

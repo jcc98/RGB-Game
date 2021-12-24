@@ -75,8 +75,6 @@ function genNumbers() {
     rgbRed.textContent = rgbObj[0];
     rgbGreen.textContent = rgbObj[1];
     rgbBlue.textContent = rgbObj[2];
-
-    console.log(rgbObj)
     shuffle(fourAnswers);
 // Change bullets to color
 item0.style.backgroundColor = `rgb(${fourAnswers[0]})`;

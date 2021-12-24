@@ -6,11 +6,20 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 .shadow {
     box-shadow: 1px 5px 8px 2px rgba(0,0,0,0.59);
-    padding: 5rem 10rem;    
+    padding: 5rem 10rem;
+    @media only screen and (max-width: 800px) {
+     box-shadow: none;
+     padding: 0;
+    }    
 }
 
 .container-change {
@@ -20,6 +29,10 @@
 .title {
     color: #006064;
     text-shadow: 1px 1px 1px #fff;
+
+    @media only screen and (max-width: 800px) {
+        font-size: 3rem;
+    }
 
 }
 
@@ -42,14 +55,19 @@
     
 }
 
+#myBar {
+    transition: all 0.5s ease-out;
+}
+
 #myProgress {
     width: 100%;
     background-color: rgb(214, 214, 214);
 }
 
 .body-container {
-    
     background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);}
+
+
 
 .my-bar {
     width: 1%;
@@ -84,6 +102,10 @@
     &:active {
         transform: scale(.7);
     }
+    @media screen and (max-width: 800px) {
+        padding: 18px;
+        margin: 10px;
+    }
     
 }
 
@@ -91,6 +113,10 @@
     color: #006064;
     font-size: 2.5rem;
     text-shadow: 1px 1px 1px #fff;
+
+    @media screen and (max-width: 800px) {
+        font-size: 1.5rem;
+    }
 
 }
 
@@ -106,6 +132,9 @@
 
 .correct-rgb-values {
     font-size: 5rem;
+    @media screen and (max-width: 800px) {
+        font-size: 2.5rem;
+    }
 }
 
 div > .rgbRed {
