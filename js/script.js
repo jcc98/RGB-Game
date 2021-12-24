@@ -90,6 +90,7 @@ match = `rgb(${rgbObj[0]}, ${rgbObj[1]}, ${rgbObj[2]})`;
 
 // Event listener when bullet is clicked
 ulTarget.addEventListener("click", (e) => {
+    if (e.target.value !== 0) return;
     if (e.target.style.backgroundColor === match) {
         score++;
         scoreDisplay.innerHTML = `Score: ${score}`;
